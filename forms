@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6e6e6; 
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"], input[type="email"], select, textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical; 
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Music Survey</h1>
+    <form action="submit_form.php" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="3" cols="60" placeholder="Share your thoughts..."></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Music Preferences</legend>
+            <label>Favorite Genre:</label>
+            <input type="radio" id="rock" name="genre" value="rock">
+            <label for="rock">Rock</label><br>
+            <input type="radio" id="pop" name="genre" value="pop">
+            <label for="pop">Pop</label><br>
+            <input type="radio" id="jazz" name="genre" value="jazz">
+            <label for="jazz">Jazz</label><br>
+
+            <label>Favorite Instruments:</label>
+            <input type="checkbox" id="guitar" name="instrument" value="guitar">
+            <label for="guitar">Guitar</label><br>
+            <input type="checkbox" id="piano" name="instrument" value="piano">
+            <label for="piano">Piano</label><br>
+            <input type="checkbox" id="drums" name="instrument" value="drums">
+            <label for="drums">Drums</label><br>
+
+            <label for="subscription">Subscription Plan:</label>
+            <select id="subscription" name="subscription" size="3">
+                <option value="free">Free</option>
+                <option value="basic">Basic</option>
+                <option value="premium">Premium</option>
+                <option value="vip">VIP</option>
+            </select>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <footer>
+        <p>Dalton Armstrong, <a href="mailto:darmst12@my.nscc.edu">darmst12@my.nscc.edu</a></p>
+    </footer>
+</body>
+</html>
+
+</html>
